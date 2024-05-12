@@ -24,6 +24,7 @@ Solution : - To create a system which is able to collect the data of all the inc
 ---
 ## Installation and Setup:
 To run the Incident Awareness & Reporting Portal locally, follow these steps:
+
 1.Clone the repository:
 ```
 
