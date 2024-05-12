@@ -27,7 +27,7 @@ To run the Incident Awareness & Reporting Portal locally, follow these steps:
 
 1.Clone the repository:
 ```
-
+https://github.com/uakspecial1/Rapid-Rescue-Network.git
 ```
 2.Install the dependencies for the server:
 ```
