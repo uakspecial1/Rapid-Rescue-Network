@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Current Issues</title>
+    <style>
+        /* Main styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #194F92;
+        }
+
+        #main {
+            padding: 50px 150px 0 150px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            text-align: center;
+            color: #194F92;
+            font-size: 36px;
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #194F92;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #194F92;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        #feed{
+            color: #333;
+        }
+        #feed:hover{
+            color: black;
+        }
+        
+        /* Added styles for scrollable table */
+        .scrollable-table {
+            max-height: 400px; /* Adjust the height as needed */
+            overflow-y: auto;
+        }
+    </style>
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="vedio_support.html">Helpful Resources</a></li>
+        <li><a href="acknowledment.html">Report Complaint</a></li>
+        <li><a href="Contact_us.html">Contact Us</a></li>
+    </ul>
+
+    <div id="main">
+        <h1>CURRENT ISSUES</h1>
+        <!-- Added scrollable div -->
+        <div class="scrollable-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Complaint</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% Reporteddetails.forEach(function(complaint) { %>
+                    <tr>
+                        <td><%= complaint.date_time %></td>
+                        <td><%= complaint.complaint_type %></td>
+                        <td><%= complaint.location %></td>
+                        <td><%= complaint.description %></td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>Your opinion matters to us <br>
+        Share your thoughts via<a id="feed" href="Feedback_form.html"> Feedback</a></p>
+    </footer>
+
+</body>
+
+</html>

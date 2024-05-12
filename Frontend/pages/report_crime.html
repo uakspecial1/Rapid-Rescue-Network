@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Crime</title>
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #00b4db, #0083b0); /* Gradient blue background */
+            height: 100%;
+        }
+
+        h1 {
+            color: #fff;
+            font-family: Verdana, sans-serif;
+            text-align: center;
+            text-decoration: underline;
+            margin-top: 50px;
+        }
+
+        .signup-box {
+            width: 80%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            border-radius: 10px;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background on hover */
+        }
+
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            text-align: right;
+            margin-right: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 70%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #a3b7ca;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #5ca106;
+        }
+    </style>
+</head>
+<body>
+<h1>REPORT CRIME</h1>
+<div class="signup-box">
+    <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="/viewIssue">View Issues</a></li>
+        <li><a href="vedio_support.html">Helpful Resources</a></li>
+        <li><a href="Contact_us.html">Contact us</a></li>
+    </ul>
+
+    <h2 style="text-align: center; color: #333;">Enter Details</h2>
+
+    <form action="/report_crime" method="POST">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="First Name" /><br>
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Last Name" /><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" /><br>
+        <label for="date_time">Date and Time</label>
+        <input type="datetime-local" id="date_time" name="date_time" /><br>
+        <label for="complaint_type">Nature of Complaint</label>
+        <input type="text" id="complaint_type" name="complaint_type" placeholder="Nature of Complaint" /><br>
+        <label for="location">Location of Crime</label>
+        <input type="text" id="location" name="location" placeholder="Location of Crime" /><br>
+        <label for="description">Description of Events</label>
+        <input type="text" id="description" name="description" placeholder="Description of Events" /><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

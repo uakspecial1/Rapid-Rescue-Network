@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Homepage</title>
+    <style>
+        /* Set default gradient background */
+        html {
+            background: linear-gradient(to bottom, #4F86F7, #2969C0);
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a,
+        .dropbtn {
+            margin: 0;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: rgb(240, 76, 76);
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #main {
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: rgb(255, 255, 255); /* Changed title color to white */
+            font-size: 36px;
+        }
+        #logos{
+            text-align: center;
+            color: rgb(255, 255, 255);;
+        }
+
+        p {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border: 1px solid #fff; /* Updated border color */
+            border-radius: 10px;
+            font-size: 18px;
+            color: #333; /* Changed text color */
+            text-align: center;
+        }
+
+        .img1 {
+            width: 200px;
+            height: 112px;
+            margin: 15px;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .img1:hover {
+            transform: scale(1.05);
+        }
+
+        .img2 {
+            width: 50px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            position: absolute;
+            left: 25px;
+            top: 50px; /* Adjusted top position */
+        }
+        .sponsers{
+            text-align: center;
+
+        }
+        .left-side{
+            position: relative;
+            width: 400px;
+            height: 1200px;
+            background-color: rgba(255, 255, 255, 0.8);
+            
+        }
+        .container1{
+            position: relative;
+            width: 400px;
+            color: #333;
+            overflow-y: auto;
+
+        }
+
+        h5{
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border: 1px solid #fff; /* Updated border color */
+            border-radius: 10px;
+            font-size: 18px;
+            color: #333; /* Changed text color */
+            text-align: center;
+        }
+        a{
+            color: #333;
+        }
+        .container1 h5 a:hover {
+            color: #194F92; /* Change color on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+       
+        #one{
+            background-color: #333;
+            color: #fff;
+            margin: 0px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .right-side{
+            position: absolute;
+            width: 900px;
+            height: 800px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .container2{
+            display: flex;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.8);
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .Big-img{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 50px; left: 500px;
+            
+        }
+        .img3{
+            width: 800px;
+            height: 600px;
+
+        }
+        footer {
+            padding: 30px 10;
+            background-image: url('footer3.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .quick-links, .newsletter, .inquiry, .social-media {
+            width: 20%; /* Adjust the width as needed */
+        }
+
+        .quick-links h3, .newsletter h3, .inquiry h3, .social-media h3 {
+            margin-bottom: 10px;
+        }
+
+        .quick-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .quick-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .quick-links ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .quick-links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .newsletter input[type="email"],
+        .newsletter button {
+            padding: 10px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .newsletter input[type="email"] {
+            width: 200px;
+        }
+
+        .newsletter button {
+            background-color: #4F86F7;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .inquiry p {
+            margin-bottom: 5px;
+        }
+
+        .social-media ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .social-media ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-media ul li:last-child {
+            margin-right: 0;
+        }
+
+        .social-media ul li a img {
+            width: 30px; /* Adjust the size of social media icons */
+        }
+
+
+
+      
+    </style>
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="/viewIssue">View Issues</a></li>
+        <li><a href="vedio_support.html">Helpful Resources</a></li>
+        <li><a href="acknowledment.html">Report Complaint</a></li>
+        <li><a href="Contact_us.html">Contact Us</a></li>
+        <li><a href="Feedback_form.html">Feedback</a></li>
+        <li style="float:right"><a class="logout-btn" href="/signup.html">Sign-Up</a></li>
+    </ul>
+
+    <div id="main">
+        <img class="img2" src="RapidRescue Network.png" alt="image6" style="width: 150px;">
+        <h1><b>Incident Awareness and Reporting Portal</b></h1><br><br><br><br><!-- Adjusted title -->
+        <p>Rapid Rescue Network provides a centralized forum for community members to exchange information, report crimes, and remain up to date on safety-related issues. To ensure inclusion, it usually contains elements like emergency contact information, data analysis capabilities, community involvement forums, criminal reporting, anonymous reporting alternatives, disaster management suggestions, and accessibility features. Through the utilization of technology, this portal enables law enforcement and civilians to communicate and collaborate, so enabling communities to proactively and effectively address safety issues.</p>
+        
+    </div>
+    <br>
+
+    
+
+    <div class="sponsers">
+        <h4 id="logos">Our Sponsers</h4>
+        <a target="_blank" href="https://i4c.mha.gov.in/" ><img class="img1" src="icccc.jpg" alt="Image 1"></a>
+        <a target="_blank" href="https://ndma.gov.in/"><img class="img1" src="ndma.avif" alt="Image 2"></a>
+        <a  target="_blank" href="https://www.unicef.org/india/"><img class="img1" src="Unicef.jpg" alt="Image6"> </a><!-- Adjusted size of the 3rd image -->
+        <a  target="_blank" href="https://www.woah.org/en/home/"><img class="img1" src="OIE.jpg" alt="Image 4"></a>
+        <a  target="_blank" href="https://www.who.int/"><img class="img1" src="who logo.jpg" alt="Image 5"></a>
+        <a  target="_blank" href="https://nwsa.org.au/"><img class="img1" src="NWSA.jpg" alt="Image 3"></a>
+    </div><br><br>
+
+    <aside>
+        
+        <div class="left-side">
+            
+            <div class="container1">
+                <h5 id="one">TRENDING NEWS</h5>
+               
+                <h5><a  target="_blank" href="https://www.indiatoday.in/india/story/delhi-bomb-school-threat-who-are-behind-emails-students-parents-chaos-hoax-2533881-2024-05-01">
+                    Bomb threat to 100 Delhi NCR schools a hoax. Who have been behind most threats
+                </a>
+                </h5>
+
+                <h5><a target="_blank" href="https://www.indiatoday.in/india/story/kerala-man-sentenced-for-sexually-assaulting-minor-daughter-2533917-2024-05-01">Kerala man sexually assaults minor daughter, sentenced to three life terms
+                    A Kerala court sentenced a man to three life terms for sexually assaulting his six-year-old daughter. The trial followed the incident in July 2023, highlighting the judicial commitment to justice and the importance of safeguarding children from abuse.</a></h5>
+
+                <h5><a  target="_blank" href="https://www.indiatoday.in/india/story/manipur-violence-armed-men-dressed-in-police-attire-freed-mahar-regiment-2533818-2024-05-01">
+                    Meitei women vigilante group frees 11 armed men detained by Army in Manipur
+                </a>
+                </h5>
+
+                <h5><a  target="_blank" href="https://www.indiatoday.in/india/story/severe-heatwave-grips-parts-of-eastern-india-gangetic-west-bengal-worst-hit-2533757-2024-05-01">Severe heatwave grips parts of eastern India, Gangetic West Bengal worst-hit
+                    Kalaikunda in West Bengal recorded the maximum temperature at 47.2 degrees Celsius, a significant 10.4 degrees above normal.</a></h5>
+                
+                <h5><a  target="_blank" href="https://www.indiatoday.in/india/tamil-nadu/story/tamil-nadu-accident-in-salem-bus-falls-into-deep-gorge-killed-injured-2533724-2024-05-01">At least 5 killed, 45 injured after bus falls into deep gorge in Tamil Nadu
+                    The incident occurred when a private bus en route from Tamil Nadu's Yercaud to Salem veered out of control and plunged down a hill, killing at least four passengers.</h5></a>
+                
+                <h5>
+                   <a  target="_blank" href="https://www.indiatoday.in/india/story/uttar-pradesh-kanpur-man-befriends-woman-instagram-kills-discovering-45-2533720-2024-04-30">
+                    Man, 20, befriends woman on Instagram, beats her on discovering she is 45
+                   </a> 
+                </h5>
+
+                <h5>
+                    <a  target="_blank" href="https://www.indiatoday.in/india/story/satellite-captures-extent-of-uttarakhand-forest-fire-2533597-2024-04-30">
+                        Satellite captures extent of Uttarakhand forest fire
+                        At least 10 large fires were raging as of Tuesday, four days after the blaze started in Uttarakhand hills.
+                    </a>
+                </h5>
+
+                <h5>
+                    <a  target="_blank" href="https://www.indiatoday.in/india/video/heavy-rain-results-in-flooding-in-kashmir-gulmarg-receives-fresh-snowfall-2533448-2024-04-30">
+                        Heavy rain results in flooding in Kashmir, Gulmarg receives fresh snowfall
+                    </a>
+                </h5>
+
+            </div>
+
+            <div class="Big-img">
+                <a  target="_blank" href="https://www.iforher.com/motivation/society-women/14-ngo-working-for-women-empowerment-india/"><img src="women.png" alt="Big-img1" style="width: 900px;"></a>
+                <br><br> 
+            </div>
+        </div>
+
+    </aside><br><br><br><br><br><br>
+
+    <div class="container2">
+        
+        <img style="width: 400px;" src="food1.jpg" alt="camp1">
+        <img style="width: 400px;" src="food2.jpg" alt="camp2">
+        <img style="width: 400px;" src="food3.webp" alt="camp3">
+        
+    </div>
+    <p>
+        Minister for youth welfare and sports development Udhayanidhi Stalin and school education minister Anbil Mahesh Poyyamozhi made a surprise visit to a corporation school in Madurai to inspect the implementation of the chief minister's breakfast scheme for primary school children.
+    </p>
+
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/viewIssue">View Issues</a></li>
+                <li><a href="vedio_support.html">Helpful Resources</a></li>
+                <li><a href="Contact_us.html">Contact Us</a></li>
+                <li><a href="Feedback_form.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="newsletter">
+            <h3>Our Newsletter</h3>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="inquiry">
+            <h3>Inquiry</h3>
+            <p>Contact us for any inquiries or assistance.</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="social-media">
+            <h3>Connect With Us</h3>
+            <ul>
+                <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="linkedin .png" alt="LinkedIn"></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+</html>

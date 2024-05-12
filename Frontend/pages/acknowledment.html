@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acknowledgement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00cc99, #ccdbfd ); /* Gradient blue background */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .moto {
+            font-size: 30px;
+            color: #020405; /* Updated color */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgb(0, 0, 0);
+            animation: glow 2s linear infinite alternate;
+        }
+
+        .register {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            border-radius: 10px; /* Increased border radius */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Increased box shadow */
+            display: flex;
+            overflow: hidden;
+            width: 80%; /* Adjusted width */
+            margin: 0 auto; /* Centered horizontally */
+        }
+
+        .register-left {
+            flex: 1;
+            text-align: center;
+            padding: 60px; /* Increased padding */
+            color: #fff;
+        }
+
+        .register-left h3 {
+            font-size: 32px; /* Updated font size */
+            margin-bottom: 20px;
+        }
+
+        .register-left p {
+            font-size: 20px; /* Updated font size */
+            line-height: 1.5;
+        }
+
+        .register-left img {
+            width: 200px; /* Increased width */
+            margin-top: 50px; /* Increased margin */
+            animation: mover 1s infinite alternate;
+        }
+
+        .register-right {
+            flex: 1;
+            background-color: #fff;
+            padding: 60px; /* Increased padding */
+        }
+
+        .register-form {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .btnRegister {
+            display: inline-block;
+            margin-top: 40px; /* Increased margin */
+            padding: 15px 40px; /* Increased padding */
+            background: #8ba0a4; /* Updated color */
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px; /* Increased border radius */
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 20px; /* Updated font size */
+        }
+
+        .btnRegister:hover {
+            background: #3cb371; /* Updated hover color */
+        }
+
+        .feedback:hover{
+            border-radius: 20px;
+            background-color: #3cb371;
+            padding: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #faaac7; /* Gradient green footer background */
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 100px;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff; /* Link color */
+            text-decoration: none;
+        }
+        #feed{
+            color: #333;
+        }
+        #feed:hover{
+            color: black;
+        }
+
+        @keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="register">
+            <div class="register-left">
+                <img src="icon.jpg" alt="">
+                <h3>Welcome</h3>
+                <p>You are 30 seconds away from filing a complaint</p>
+            </div>
+            <div class="register-right">
+                <div class="register-form">
+                    <p class="register">I acknowledge that providing false information could make me liable to penal
+                        actions under Indian Laws. I understand that action on the complaints reported on this portal
+                        shall be taken by concerned authorities as per Indian Laws. The complaint information you
+                        submit to this site is encrypted via secure socket layer (SSL) encryption. Please see the
+                        Privacy Policy for further information. We thank you for your cooperation.</p>
+                    <form action="report_crime.html">
+                        <input type="submit" class="btnRegister" value="I accept">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p><h3 class="moto">Rapid Rescue Network</h3>
+            Share your thoughts via<a id="feed" href="Feedback_form.html"> Feedback</a></p>
+    </footer>
+</body>
+
+</html>
